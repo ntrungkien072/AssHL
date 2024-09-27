@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.css">
+    <script src="../lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="../lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+</head>
+
+<body ng-app="myApp" >
+    <div class="container-fluid">
+        <div >
+            <div class="row">
+                <div ng-include="'layout/sitebar.html'">
+    
+                </div>
+                <div class="col-12 position-relative">
+                    <!-- Hiển thị nội dung -->
+                   
+                    <div ng-view></div>
+                    <div ng-include="'layout/footer.html'"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+        integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            var myApp = angular.module("myApp", ["ngRoute"]);
+            myApp.config(function($routeProvider) {
+              $routeProvider
+              .when("/", {
+                templateUrl : "trangchu1.html"
+              })
+              .when("/trang-chu", {
+                templateUrl : "trangchu1.html"
+              })
+              .when("/chi-tiet", {
+                templateUrl : "chitiet1.html"
+              })
+              .when("/dang-ki", {
+                templateUrl : "dangki1.html"
+              })
+              .when("/dang-nhap", {
+                templateUrl : "dangnhap1.html"
+              })
+              .when("/lien-he", {
+                templateUrl : "lienhe1.html"
+              })
+              .when("/gio-hang", {
+                templateUrl : "giohang1.html"
+              })
+              .when("/thanh-toan", {
+                templateUrl : "thanhtoan1.html"
+              })
+              .when("/gioi-thieu", {
+                templateUrl : "gioithieu1.html"
+              })
+          
+          
+          
+              
+              ;
+            });
+            </script>
+
+</body>
+
+</html>
